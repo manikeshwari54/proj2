@@ -7,14 +7,10 @@
 # documentation.
 
 name: Java CI with Maven
-
 on:
-  push:
-    branches: [ "Master" ]
-  pull_request:
-    branches: [ "main" ]
-
-obs:
+push:
+branches: [ "master" ]
+jobs:
 maven:
 runs-on: ubuntu-latest
 steps:
@@ -28,4 +24,4 @@ distribution: 'temurin'
 - name: Build with Maven
 run: mvn compile
 - name: Run the App
-run: java -cp target/classes com.example.HelloWorld
+run: java -cp target/classes com.example.Helloworld
